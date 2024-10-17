@@ -88,6 +88,7 @@ a.overlay-link::before {
 }
 
 .overlay-body {
+    position: relative;
     max-width: 600px;
     text-align: center;
     font-family: "Inter", sans-serif;
@@ -131,3 +132,10 @@ video#video::-webkit-media-controls-enclosure {
     color: #f5f6fa;
     background-color: rgb(132, 94, 194);
 }
+
+audio {
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+}
+
