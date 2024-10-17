@@ -39,7 +39,7 @@ body {
 
 .No:hover, .Yes:hover {
     background-color: rgb(132, 94, 194);
-    color: aliceblue;
+    color: blue;
 }
 
 .links {
