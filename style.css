@@ -43,6 +43,7 @@ p.overlay-title {
     display: flex;
     justify-content: space-evenly;
     margin: 24px -8px -8px;
+    margin-bottom: 70px;
 }
 
 #accept-button {
@@ -137,5 +138,6 @@ audio {
     position: absolute;
     bottom: 0;
     left: 25%;
+   
 }
 
