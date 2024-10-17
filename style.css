@@ -1,64 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-* {
+p {
     margin: 0;
-    padding: 0;
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+}
+
+.overlay,
+.scare {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+p.overlay-title {
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.overlay-button {
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    padding-right: 24px;
+    padding-left: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    border-radius: 4px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.overlay-buttons-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 24px -8px -8px;
+}
+
+#accept-button {
+    background-color: rgb(132, 94, 194);
+    color: white;
+    border: 2px solid rgb(132, 94, 194);
+    transition: all .3s ease;
+}
+
+#decline-button {
+    color: rgb(132, 94, 194);
+    border: 2px solid rgb(132, 94, 194);
+    transition: all .3s ease;
+}
+
+p.overlay-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+a.overlay-link {
+    display: inline-block;
     text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(132, 94, 194);
+    line-height: 1;
+    position: relative;
+    margin-top: 16px;
 }
 
-a {
+a.overlay-link::before {
+    position: absolute;
+    content: "";
+    height: calc(50% + 4px);
+    width: calc(100% + 8px);
+    bottom: -4px;
+    left: -4px;
+    background-color: rgba(132, 94, 194, 0.1);
+}
+
+.overlay-body {
+    max-width: 600px;
     text-align: center;
-
+    font-family: "Inter", sans-serif;
 }
 
-body {
+.overlay[hidden] {
+    display: none;
+}
+
+.overlay {
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
-    overflow: hidden;
+    background-color: #f5f6fa;
+    padding-right: 24px;
+    padding-left: 24px;
 }
 
-.block p {
-    font-size: 19px;
-    font-family: "Roboto";
+.scare {
+    z-index: 1;
 }
 
-.No, .Yes {
-    text-decoration: none;
-    color: black;
-    padding: 12px 24px 12px 25px;
-    border-radius: 5px;
-    border: 2px solid rgb(132, 94, 194);
-    font-family: "Roboto";
-    color: rgb(132, 94, 194);
-    transition: 0.3s;
-}
-
-.No:hover, .Yes:hover {
-    background-color: rgb(132, 94, 194);
-    color: blue;
-}
-
-.links {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-}
-
-.Yes {
-
-}
-
-.No {
-
-}
-
-.policy {
-    margin-top: 50px;
-    display: block;
+video#video {
+    height: 100%;
     width: 100%;
-    font-family: "Poppins";
+    object-fit: cover;
+}
+
+video#video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+#accept-button:hover {
+    color: rgb(132, 94, 194);
+    background-color: #f5f6fa;
+    border: 2px solid rgb(132, 94, 194);
+}
+
+#decline-button:hover {
+    color: #f5f6fa;
+    background-color: rgb(132, 94, 194);
 }
