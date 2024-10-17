@@ -47,15 +47,15 @@ p.overlay-title {
 }
 
 #accept-button {
-    background-color: rgb(132, 94, 194);
+    background-color: #fd8300;
     color: white;
-    border: 2px solid rgb(132, 94, 194);
+    border: 2px solid #fd8300;
     transition: all .3s ease;
 }
 
 #decline-button {
-    color: rgb(132, 94, 194);
-    border: 2px solid rgb(132, 94, 194);
+    color: #fd8300;
+    border: 2px solid #fd8300;
     transition: all .3s ease;
 }
 
@@ -124,14 +124,14 @@ video#video::-webkit-media-controls-enclosure {
 }
 
 #accept-button:hover {
-    color: rgb(132, 94, 194);
+    color: #fd8300;
     background-color: #f5f6fa;
-    border: 2px solid rgb(132, 94, 194);
+    border: 2px solid #fd8300;
 }
 
 #decline-button:hover {
     color: #f5f6fa;
-    background-color: rgb(132, 94, 194);
+    background-color: #fd8300;
 }
 
 audio {
