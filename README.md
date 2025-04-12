@@ -1,1 +1,1 @@
-SCREAMER ON CSS, JS AND HTML. ONLY!!!!!
+Memes to your taste! Enjoy!
